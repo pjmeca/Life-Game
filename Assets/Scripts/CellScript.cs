@@ -17,8 +17,6 @@ public class CellScript : MonoBehaviour
     void Awake()
     {
         cellRenderer = GetComponent<Renderer>();
-        if(cellRenderer == null)
-            Debug.LogError("cellRenderer is null (shouldn't be)");
         updateCell();
     }
 

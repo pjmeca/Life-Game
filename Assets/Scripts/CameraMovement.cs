@@ -26,7 +26,6 @@ public class CameraMovement : MonoBehaviour
 
         if (Input.touchCount > 0)
         {
-            Debug.Log("Touch movement");
             x = Input.touches[0].deltaPosition.x;
             y = Input.touches[0].deltaPosition.y;
         } else if(Input.touchCount > 1)

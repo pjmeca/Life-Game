@@ -28,9 +28,7 @@ public class CameraZoom : MonoBehaviour
             else{
                 float deltaTouchDistance = newTouchDistance - touchDistance;
                 touchDistance = newTouchDistance;
-                /*while(Mathf.Abs(deltaTouchDistance) >= 1)
-                    deltaTouchDistance /= 10f;
-                zoom(deltaTouchDistance);*/
+                
                 if(deltaTouchDistance != 0)
                     zoom(deltaTouchDistance > 0 ? 0.1f : -0.1f);
             }
@@ -41,8 +39,6 @@ public class CameraZoom : MonoBehaviour
 
     private void zoom(float value)
     {
-        Debug.Log("Zooming with value: "+value);
-
         Vector3 tmp = Camera.main.transform.position;
         tmp += Camera.main.transform.forward * value * zoomSpeed;
         if (tmp.z < -5)
